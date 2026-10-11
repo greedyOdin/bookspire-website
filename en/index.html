@@ -3,85 +3,282 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bookspire – your reading room in a tower</title>
+    <title>Bookspire – your TBR pile deserves a home</title>
     <meta
       name="description"
-      content="Bookspire is an app for bookworms: keep track of your books and furnish your own reading room in a magical tower." />
+      content="Bookspire turns your books into a cosy reading room in a magical tower. Log what you read, fill shelf after shelf and watch your tower grow." />
     <meta name="theme-color" content="#2f5d50" />
     <link rel="icon" type="image/png" href="../images/favicon.png" />
     <link rel="apple-touch-icon" href="../images/icon.png" />
     <link rel="alternate" hreflang="de" href="https://bookspire.de/" />
-    <meta property="og:title" content="Bookspire – your reading room in a tower" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bookspire – your TBR pile deserves a home" />
     <meta
       property="og:description"
-      content="Keep track of your books and furnish your own reading room in a magical tower." />
-    <meta property="og:image" content="https://bookspire.de/images/icon.png" />
+      content="A cosy reading room that grows with your books. Coming soon for iPhone and Android." />
+    <meta property="og:image" content="https://bookspire.de/images/og-en.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preload" as="image" href="../images/app/room.webp" />
+    <link rel="preload" as="font" type="font/woff2" href="../fonts/Fraunces-SoftExtraBold.woff2" crossorigin />
     <link rel="stylesheet" href="../style.css" />
   </head>
-  <body>
+  <body class="home">
     <header class="site-header">
       <div class="wrap">
         <a class="brand" href="./">
-          <img src="../images/logo.png" alt="" width="40" height="40" />
+          <img src="../images/logo-80.png" alt="" width="40" height="40" />
           Bookspire
         </a>
         <a class="lang" href="../" hreflang="de" lang="de">Deutsch</a>
       </div>
     </header>
 
-    <main class="wrap">
-      <section class="hero">
-        <div>
-          <h1>Your reading room in a tower</h1>
+    <main>
+      <section class="hero wrap">
+        <div class="hero-text">
+          <p class="eyebrow">For everyone with too many books. So, for you.</p>
+          <h1>Your TBR pile deserves a home.</h1>
           <p class="lead">
-            Bookspire is an app for bookworms. Keep track of the books you have read and your
-            reading list, and furnish your own reading room in a magical tower.
+            Bookspire turns your books into a cosy reading room in a magical tower. You read as
+            always – on paper or your e-reader – and log here what you read. Shelf by shelf, floor
+            by floor.
           </p>
-          <p>
-            Every book you have read stands on a shelf there, unread ones lie on a pile. Every book
-            you finish unlocks something new. When all shelves are full, the tower grows by a
-            floor – and on the ground floor a mysterious egg is waiting for you to read.
-          </p>
-          <p><span class="badge">Coming soon for iPhone and Android</span></p>
+          <div class="cta-row">
+            <a class="button" href="#waitlist">Join the waitlist</a>
+            <span class="soon">Coming soon for iPhone and Android</span>
+          </div>
         </div>
-        <img
-          src="../images/lesezimmer.png"
-          width="800"
-          height="784"
-          alt="A reading room in a tower: bookshelves, an armchair by the window, a purple dragon on the rug, a small castle and piles of books." />
+        <div class="hero-room">
+          <div class="sparkles" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <video
+            class="room-video"
+            muted
+            playsinline
+            loop
+            preload="none"
+            poster="../images/app/room.webp"
+            data-src="../images/app/room.mp4"
+            width="640"
+            height="592"
+            aria-label="A reading room in a tower: full bookshelves, a green wing chair, piles of books and a little figure who walks around and sits down in the chair to read."></video>
+        </div>
       </section>
 
-      <section>
-        <h2>What awaits you</h2>
+      <section class="steps wrap" aria-labelledby="steps-title">
+        <h2 id="steps-title">How it works</h2>
+        <ol>
+          <li>
+            <span class="step-number" aria-hidden="true">1</span>
+            <h3>Add your books</h3>
+            <p>Scan the ISBN, search, or import your library from Goodreads or BookBuddy.</p>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">2</span>
+            <h3>Log your progress</h3>
+            <p>Enter the page you are on. A tap on +10, +25 or +50 is enough.</p>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">3</span>
+            <h3>Watch it grow</h3>
+            <p>Every book you finish goes on a shelf, and every book unlocks something new.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="feature wrap">
+        <div class="feature-text reveal">
+          <h2>Every book gets its place on the shelf.</h2>
+          <p>
+            Books you have read stand on the shelves spine out, unread ones lie on your TBR pile on
+            the ground floor. Tap a shelf to see every title up close.
+          </p>
+        </div>
+        <figure class="phone reveal">
+          <video muted playsinline loop preload="none" poster="../images/app/shelf.webp" data-src="../images/app/shelf.mp4" width="360" height="770"
+            aria-label="A shelf opens up close: colourful spines with titles and authors."></video>
+        </figure>
+      </section>
+
+      <section class="feature feature-flip wrap">
+        <div class="feature-text reveal">
+          <h2>Shelves full? Your tower grows.</h2>
+          <p>
+            When every shelf on a floor is full, your tower grows by another floor. Ivy and roses
+            climb its walls, and the forest around it grows too.
+          </p>
+        </div>
+        <div class="phones reveal">
+          <figure class="phone">
+            <video muted playsinline loop preload="none" poster="../images/app/grow.webp" data-src="../images/app/grow.mp4" width="360" height="770"
+              aria-label="A magic cloud wraps the top of the tower, and the tower gains a new floor."></video>
+          </figure>
+          <figure class="phone phone-small">
+            <video muted playsinline loop preload="none" poster="../images/app/tower.webp" data-src="../images/app/tower.mp4" width="360" height="770"
+              aria-label="A tall tower seen from outside, with ivy and autumn leaves drifting across the sky."></video>
+          </figure>
+        </div>
+      </section>
+
+      <section class="feature wrap">
+        <div class="feature-text reveal">
+          <h2>Furnish your reading room.</h2>
+          <p>
+            Wing chairs, candles, rugs, walls of moss stone or star stone, a fireplace instead of
+            the window – every book you finish brings something new. You decide where it goes and
+            in which colour.
+          </p>
+        </div>
+        <div class="phones reveal">
+          <figure class="phone">
+            <video muted playsinline loop preload="none" poster="../images/app/furnish.webp" data-src="../images/app/furnish.mp4" width="360" height="770"
+              aria-label="In furnishing mode, a wing chair is added to the room, turns emerald and is moved."></video>
+          </figure>
+          <figure class="card-shot">
+            <img src="../images/app/unlocks.webp" width="480" height="775" loading="lazy" decoding="async"
+              alt="Newly unlocked: wing chair, chest, walnut floor and a gold frame (screen in German)." />
+          </figure>
+        </div>
+      </section>
+
+      <section class="feature feature-flip wrap">
+        <div class="feature-text reveal">
+          <h2>Cosy in every season.</h2>
+          <p>
+            The view from the window follows day and night, spring, summer, autumn and winter. And
+            there are special seasons for Halloween, Advent, Easter and Midsummer.
+          </p>
+        </div>
+        <div class="phones reveal">
+          <figure class="room-card">
+            <video muted playsinline loop preload="none" poster="../images/app/seasons.webp" data-src="../images/app/seasons.mp4" width="640" height="568"
+              aria-label="The same reading room by day, at dusk, at night with moon and stars, in winter with snow and in spring."></video>
+          </figure>
+          <figure class="card-shot card-shot-small">
+            <img src="../images/app/calendar.webp" width="480" height="650" loading="lazy" decoding="async"
+              alt="Season calendar: Halloween from 20 October, Advent calendar from 1 December, Easter, Midsummer (screen in German)." />
+          </figure>
+        </div>
+      </section>
+
+      <section class="feature wrap">
+        <div class="feature-text reveal">
+          <h2>A little you who reads along.</h2>
+          <p>
+            Create your avatar. It strolls through your reading room, sits down in the armchair and
+            reads. New clothes, hairstyles and colours come with every page you log.
+          </p>
+        </div>
+        <figure class="phone reveal">
+          <video muted playsinline loop preload="none" poster="../images/app/avatar.webp" data-src="../images/app/avatar.mp4" width="360" height="770"
+            aria-label="The avatar changes skin tone while being created."></video>
+        </figure>
+      </section>
+
+      <section class="mystery" aria-labelledby="mystery-title">
+        <div class="wrap mystery-inner">
+          <svg class="egg" viewBox="0 0 120 150" role="img" aria-label="A green egg with light spots in a golden nest.">
+            <ellipse cx="60" cy="132" rx="50" ry="14" fill="#c9a227" />
+            <ellipse cx="60" cy="128" rx="38" ry="9" fill="#8a6b17" opacity=".45" />
+            <g class="egg-body">
+              <path d="M60 12c26 0 42 38 42 70 0 26-18 44-42 44S18 108 18 82c0-32 16-70 42-70z" fill="#2f6b4f" stroke="#1f4036" stroke-width="3" />
+              <ellipse cx="44" cy="58" rx="7" ry="5" fill="#7db46c" opacity=".7" />
+              <ellipse cx="72" cy="84" rx="9" ry="6" fill="#7db46c" opacity=".7" />
+              <ellipse cx="52" cy="100" rx="5" ry="4" fill="#7db46c" opacity=".7" />
+              <ellipse cx="46" cy="40" rx="6" ry="10" fill="#fff" opacity=".18" transform="rotate(-20 46 40)" />
+            </g>
+          </svg>
+          <div>
+            <h2 id="mystery-title">Something is waiting on the ground floor.</h2>
+            <p>
+              Right from the start, an egg lies in your reading room. With every page you log, it
+              gets a little warmer.
+            </p>
+            <p class="whisper">What hatches from it? We won't tell. Read on and find out.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="friends wrap" aria-labelledby="friends-title">
+        <h2 id="friends-title">Reading is better together.</h2>
         <div class="features">
-          <article class="feature">
-            <h3>Your library</h3>
-            <p>
-              Add books by scanning the ISBN or searching, log your reading progress, rate, write
-              notes and keep track of books you have lent out.
-            </p>
+          <article class="feature-card">
+            <h3>Visit towers</h3>
+            <p>Look around your friends' reading rooms – and see what is on their pile.</p>
           </article>
-          <article class="feature">
-            <h3>The reading room</h3>
-            <p>
-              A tower room that grows with your books. Furnish it and unlock furniture, rugs and a
-              fireplace – the view from the window follows the time of day and the seasons.
-            </p>
+          <article class="feature-card">
+            <h3>Recommend books</h3>
+            <p>Send a book with a note. One tap puts it on their reading list.</p>
           </article>
-          <article class="feature">
-            <h3>Your dragon</h3>
-            <p>
-              A little dragon hatches from the egg, grows with every page you read and one day
-              moves into a castle of its own.
-            </p>
+          <article class="feature-card">
+            <h3>Monthly ranking</h3>
+            <p>Who logs the most pages this month? No pressure, promise.</p>
           </article>
-          <article class="feature">
-            <h3>With friends</h3>
-            <p>
-              With an account, your library and tower stay the same on all your devices. Find
-              friends, recommend books to them and visit their towers.
-            </p>
+          <article class="feature-card">
+            <h3>You decide</h3>
+            <p>You choose what friends may see. Without an account, everything stays on your phone.</p>
           </article>
+        </div>
+      </section>
+
+      <section class="faq wrap narrow" aria-labelledby="faq-title">
+        <h2 id="faq-title">Good to know</h2>
+        <details>
+          <summary>Do I read the books in the app?</summary>
+          <p>
+            No. You read as usual – on paper, an e-reader or as an audiobook – and only log in
+            Bookspire how far you are.
+          </p>
+        </details>
+        <details>
+          <summary>Can I bring my library?</summary>
+          <p>
+            Yes. Bookspire imports your books from Goodreads, BookBuddy or any CSV file. Books that
+            are already there are skipped.
+          </p>
+        </details>
+        <details>
+          <summary>Do I need an account?</summary>
+          <p>
+            No. Without an account, everything stays on your device. With one, your library and
+            tower stay the same on all your devices, and you can find friends.
+          </p>
+        </details>
+        <details>
+          <summary>What does Bookspire cost?</summary>
+          <p>
+            Bookspire is free at launch. If paid extras come later, we will announce them
+            beforehand.
+          </p>
+        </details>
+        <details>
+          <summary>When can I start?</summary>
+          <p>
+            Bookspire is coming to the App Store and Google Play soon. Join the waitlist and we will
+            write to you as soon as it is ready.
+          </p>
+        </details>
+      </section>
+
+      <section id="waitlist" class="waitlist" aria-labelledby="waitlist-title">
+        <div class="wrap narrow">
+          <h2 id="waitlist-title">Be there when the tower opens.</h2>
+          <p>We will write to you once, when Bookspire is in the stores. No spam, promise.</p>
+          <form class="waitlist-form" novalidate>
+            <label class="visually-hidden" for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+            <!-- Left empty by people; bots fill it in. -->
+            <input class="trap" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <button class="button" type="submit">Sign up</button>
+          </form>
+          <p class="fine">
+            After signing up you get an email with a confirmation link. You can unsubscribe at any
+            time. More in the <a href="privacy.html#waitlist">privacy policy</a>.
+          </p>
+          <p class="form-status" role="status" aria-live="polite"></p>
         </div>
       </section>
     </main>
@@ -96,5 +293,7 @@
         </nav>
       </div>
     </footer>
+
+    <script src="../site.js" defer></script>
   </body>
 </html>

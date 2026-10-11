@@ -2,25 +2,25 @@
 
 @font-face {
   font-family: 'Fraunces';
-  src: url('fonts/Fraunces-SoftSemiBold.ttf') format('truetype');
+  src: url('fonts/Fraunces-SoftSemiBold.woff2') format('woff2');
   font-weight: 600;
   font-display: swap;
 }
 @font-face {
   font-family: 'Fraunces';
-  src: url('fonts/Fraunces-SoftExtraBold.ttf') format('truetype');
+  src: url('fonts/Fraunces-SoftExtraBold.woff2') format('woff2');
   font-weight: 800;
   font-display: swap;
 }
 @font-face {
   font-family: 'Nunito';
-  src: url('fonts/Nunito-Regular.ttf') format('truetype');
+  src: url('fonts/Nunito-Regular.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: 'Nunito';
-  src: url('fonts/Nunito-ExtraBold.ttf') format('truetype');
+  src: url('fonts/Nunito-ExtraBold.woff2') format('woff2');
   font-weight: 800;
   font-display: swap;
 }
@@ -36,6 +36,8 @@
   --primary: #2f5d50;
   --on-primary: #fffdf8;
   --primary-shadow: #1f4036;
+  /* Brass dark enough to read as text on the light background. */
+  --brass-text: #7a5e10;
   --leaf: #7db46c;
   --brass: #c9a227;
   --placeholder: #f6e7b8;
@@ -53,6 +55,7 @@
     --primary: #7db46c;
     --on-primary: #1e2420;
     --primary-shadow: #4e7a44;
+    --brass-text: #c9a227;
     --placeholder: #4a3f1c;
   }
 }
@@ -179,42 +182,325 @@ h3 {
 
 /* Landing page */
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.home main > section {
+  margin-block: clamp(3rem, 9vw, 6rem);
+}
+
+.home main > section:first-child {
+  margin-top: 1rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.85rem 1.5rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--on-primary);
+  font: inherit;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 5px 0 var(--primary-shadow);
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+/* Sinks into its shadow when pressed, like the buttons in the app. */
+.button:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--primary-shadow);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Hero */
+
 .hero {
   display: grid;
   gap: 2rem;
   align-items: center;
-  padding: 1.5rem 0 1rem;
 }
 
 @media (min-width: 52rem) {
   .hero {
-    grid-template-columns: 1.1fr 1fr;
+    grid-template-columns: 1fr 1.05fr;
     gap: 3rem;
   }
 }
 
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--brass-text);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
 .lead {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: var(--text-secondary);
   margin: 0 0 1.5rem;
 }
 
-.hero img {
-  width: 100%;
-  height: auto;
-  border-radius: 1.5rem;
-  box-shadow: 0 6px 0 var(--shadow);
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
 }
 
-.badge {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  border-radius: 999px;
+.soon {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.hero-room {
+  position: relative;
+}
+
+.room-video,
+.room-card video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 640 / 592;
+  border-radius: 1.75rem;
+  background: var(--surface);
+}
+
+/* A few sparkles float over the room, as they do in the app. */
+.sparkles span {
+  position: absolute;
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+  background: var(--brass);
+  clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sparkles span:nth-child(1) { top: 12%; left: 8%; }
+.sparkles span:nth-child(2) { top: 6%; right: 18%; width: 10px; height: 10px; }
+.sparkles span:nth-child(3) { top: 46%; right: 4%; }
+.sparkles span:nth-child(4) { bottom: 14%; left: 14%; width: 10px; height: 10px; }
+.sparkles span:nth-child(5) { bottom: 8%; right: 30%; width: 12px; height: 12px; }
+
+/* Steps */
+
+.steps h2,
+.friends h2,
+.faq h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.steps ol {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 46rem) {
+  .steps ol {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.steps li {
+  background: var(--card);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  box-shadow: 0 4px 0 var(--shadow);
+}
+
+.steps h3 {
+  margin: 0.5rem 0 0.25rem;
+}
+
+.steps p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.step-number {
+  display: inline-grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--brass);
+  color: #3a3226;
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 800;
+}
+
+/* Feature rows: text beside a phone with a clip from the app */
+
+.feature {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 52rem) {
+  .feature {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .feature-flip .feature-text {
+    order: 2;
+  }
+}
+
+.feature > * {
+  min-width: 0;
+}
+
+.feature-text h2 {
+  margin-top: 0;
+}
+
+.feature-text p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.phones {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1rem;
+}
+
+figure {
+  margin: 0;
+}
+
+/* A plain phone drawn in CSS around a clip, in the wood of the shelves. */
+.phone {
+  justify-self: center;
+  width: min(15rem, 62vw);
+  padding: 0.5rem;
+  border-radius: 2.25rem;
+  background: #4a3a2a;
+  box-shadow: 0 8px 0 var(--shadow), 0 18px 40px rgba(58, 50, 38, 0.18);
+}
+
+.phone video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 360 / 770;
+  border-radius: 1.75rem;
+  background: var(--surface);
+}
+
+/* Side by side, the pair must fit a phone screen together: at most 90% of its width. */
+.phones .phone {
+  width: min(15rem, 52vw);
+}
+
+.phone-small,
+.phones .phone-small {
+  width: min(11rem, 34vw);
+}
+
+.card-shot {
+  width: min(12rem, 34vw);
+}
+
+.card-shot-small {
+  width: min(10rem, 30vw);
+}
+
+.card-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1.25rem;
+  box-shadow: 0 6px 0 var(--shadow), 0 14px 30px rgba(58, 50, 38, 0.15);
+}
+
+.room-card {
+  flex: 1;
+  min-width: 0;
+  max-width: 26rem;
+}
+
+/* Mystery: only the egg, nothing that hatches */
+
+.mystery {
   background: var(--primary);
   color: var(--on-primary);
-  font-weight: 800;
-  box-shadow: 0 4px 0 var(--primary-shadow);
+  padding-block: clamp(2.5rem, 7vw, 4rem);
 }
+
+.mystery h2 {
+  color: var(--on-primary);
+  margin-top: 0;
+}
+
+.mystery p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.mystery .whisper {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  color: var(--placeholder);
+}
+
+@media (prefers-color-scheme: dark) {
+  .mystery .whisper {
+    color: var(--brass);
+  }
+}
+
+.mystery-inner {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+@media (min-width: 46rem) {
+  .mystery-inner {
+    grid-template-columns: auto 1fr;
+    justify-items: start;
+    text-align: left;
+    gap: 3rem;
+  }
+}
+
+.egg {
+  width: 8rem;
+  height: auto;
+  overflow: visible;
+}
+
+.egg-body {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+
+/* Friends */
 
 .features {
   display: grid;
@@ -234,20 +520,155 @@ h3 {
   }
 }
 
-.feature {
+.feature-card {
   background: var(--card);
   border-radius: 1.25rem;
   padding: 1.25rem 1.25rem 1rem;
   box-shadow: 0 4px 0 var(--shadow);
 }
 
-.feature h3 {
+.feature-card h3 {
   margin-top: 0;
 }
 
-.feature p {
+.feature-card p {
   margin: 0;
   color: var(--text-secondary);
+}
+
+/* FAQ */
+
+.faq details {
+  background: var(--card);
+  border-radius: 1rem;
+  padding: 0.9rem 1.2rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 3px 0 var(--shadow);
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 800;
+  color: var(--heading);
+}
+
+.faq details p {
+  margin: 0.6rem 0 0.2rem;
+  color: var(--text-secondary);
+}
+
+/* Waitlist */
+
+.home main > .waitlist {
+  margin-bottom: 0;
+  background: var(--surface);
+  padding-block: clamp(2.5rem, 7vw, 4rem);
+  text-align: center;
+}
+
+.waitlist h2 {
+  margin-top: 0;
+}
+
+.waitlist-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.waitlist-form input[type='email'] {
+  flex: 1 1 16rem;
+  max-width: 22rem;
+  min-height: 3.2rem;
+  padding: 0 1.1rem;
+  border: 2px solid var(--shadow);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--text);
+  font: inherit;
+}
+
+.waitlist-form input[type='email']:focus-visible {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* The field for bots stays out of sight and out of the way. */
+.waitlist-form .trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.fine {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.form-status {
+  min-height: 1.6em;
+  font-weight: 800;
+  color: var(--heading);
+}
+
+.home .site-footer {
+  margin-top: 0;
+}
+
+/* Motion: only transform and opacity, and only for those who want it */
+
+@media (prefers-reduced-motion: no-preference) {
+  .sparkles span {
+    animation: twinkle 3.2s ease-in-out infinite;
+  }
+  .sparkles span:nth-child(2) { animation-delay: 0.7s; }
+  .sparkles span:nth-child(3) { animation-delay: 1.5s; }
+  .sparkles span:nth-child(4) { animation-delay: 2.1s; }
+  .sparkles span:nth-child(5) { animation-delay: 2.7s; }
+
+  .egg-body {
+    animation: wobble 4.5s ease-in-out infinite;
+  }
+
+  /* The headline and lead stay put: they are what the page is judged by while it loads. */
+  .hero-text .eyebrow,
+  .hero-text .cta-row {
+    animation: rise 0.7s ease-out both;
+  }
+  .hero-text .cta-row { animation-delay: 0.15s; }
+
+  /* Rows fade up as they scroll in; browsers without scroll timelines just show them. */
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; transform: scale(0.4) rotate(0deg); }
+  50% { opacity: 0.9; transform: scale(1) rotate(45deg); }
+}
+
+/* A shiver now and then, as if something inside were moving. */
+@keyframes wobble {
+  0%, 70%, 100% { transform: rotate(0deg); }
+  74% { transform: rotate(-6deg); }
+  78% { transform: rotate(5deg); }
+  82% { transform: rotate(-3deg); }
+  86% { transform: rotate(2deg); }
+  90% { transform: rotate(0deg); }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(1.5rem); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Legal pages */

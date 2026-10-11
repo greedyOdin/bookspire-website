@@ -3,86 +3,282 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bookspire – dein Lesezimmer im Turm</title>
+    <title>Bookspire – dein TBR-Stapel verdient ein Zuhause</title>
     <meta
       name="description"
-      content="Bookspire ist eine App für Bücherwürmer: Behalte den Überblick über deine Bücher und richte dir in einem magischen Turm dein eigenes Lesezimmer ein." />
+      content="Bookspire macht aus deinen Büchern ein gemütliches Lesezimmer in einem magischen Turm. Erfasse, was du liest, fülle Regal um Regal und lass deinen Turm wachsen." />
     <meta name="theme-color" content="#2f5d50" />
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="apple-touch-icon" href="images/icon.png" />
-    <meta property="og:title" content="Bookspire – dein Lesezimmer im Turm" />
+    <link rel="alternate" hreflang="en" href="https://bookspire.de/en/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bookspire – dein TBR-Stapel verdient ein Zuhause" />
     <meta
       property="og:description"
-      content="Behalte den Überblick über deine Bücher und richte dir in einem magischen Turm dein eigenes Lesezimmer ein." />
-    <meta property="og:image" content="https://bookspire.de/images/icon.png" />
-    <link rel="alternate" hreflang="en" href="https://bookspire.de/en/" />
+      content="Ein gemütliches Lesezimmer, das mit deinen Büchern wächst. Bald für iPhone und Android." />
+    <meta property="og:image" content="https://bookspire.de/images/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preload" as="image" href="images/app/room.webp" />
+    <link rel="preload" as="font" type="font/woff2" href="fonts/Fraunces-SoftExtraBold.woff2" crossorigin />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="home">
     <header class="site-header">
       <div class="wrap">
         <a class="brand" href="./">
-          <img src="images/logo.png" alt="" width="40" height="40" />
+          <img src="images/logo-80.png" alt="" width="40" height="40" />
           Bookspire
         </a>
         <a class="lang" href="en/" hreflang="en" lang="en">English</a>
       </div>
     </header>
 
-    <main class="wrap">
-      <section class="hero">
-        <div>
-          <h1>Dein Lesezimmer im Turm</h1>
+    <main>
+      <section class="hero wrap">
+        <div class="hero-text">
+          <p class="eyebrow">Für alle mit zu vielen Büchern. Also für dich.</p>
+          <h1>Dein TBR-Stapel verdient ein Zuhause.</h1>
           <p class="lead">
-            Bookspire ist eine App für Bücherwürmer. Behalte den Überblick über gelesene Bücher und
-            deine Leseliste und richte dir in einem magischen Turm dein eigenes Lesezimmer ein.
+            Bookspire macht aus deinen Büchern ein gemütliches Lesezimmer in einem magischen Turm.
+            Du liest wie immer – auf Papier oder dem E-Reader – und erfasst hier, was du liest.
+            Regal für Regal, Stockwerk für Stockwerk.
           </p>
-          <p>
-            Jedes gelesene Buch steht dort im Regal, ungelesene liegen auf einem Stapel. Mit jedem
-            Buch, das du beendest, schaltest du etwas frei. Sind alle Regale voll, wächst der Turm
-            um ein Stockwerk – und im Erdgeschoss wartet ein geheimnisvolles Ei darauf, dass du
-            liest.
-          </p>
-          <p><span class="badge">Bald für iPhone und Android</span></p>
+          <div class="cta-row">
+            <a class="button" href="#warteliste">Auf die Warteliste</a>
+            <span class="soon">Bald für iPhone und Android</span>
+          </div>
         </div>
-        <img
-          src="images/lesezimmer.png"
-          width="800"
-          height="784"
-          alt="Ein Lesezimmer im Turm: Bücherregale, ein Sessel am Fenster, ein lila Drache auf dem Teppich, ein kleines Schloss und Bücherstapel." />
+        <div class="hero-room">
+          <div class="sparkles" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <video
+            class="room-video"
+            muted
+            playsinline
+            loop
+            preload="none"
+            poster="images/app/room.webp"
+            data-src="images/app/room.mp4"
+            width="640"
+            height="592"
+            aria-label="Ein Lesezimmer im Turm: volle Bücherregale, ein grüner Ohrensessel, Bücherstapel und eine kleine Figur, die herumläuft und sich zum Lesen in den Sessel setzt."></video>
+        </div>
       </section>
 
-      <section>
-        <h2>Was dich erwartet</h2>
+      <section class="steps wrap" aria-labelledby="steps-title">
+        <h2 id="steps-title">So einfach geht's</h2>
+        <ol>
+          <li>
+            <span class="step-number" aria-hidden="true">1</span>
+            <h3>Bücher rein</h3>
+            <p>ISBN scannen, suchen oder deine Bibliothek aus Goodreads oder BookBuddy importieren.</p>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">2</span>
+            <h3>Fortschritt erfassen</h3>
+            <p>Trag ein, auf welcher Seite du bist. Ein Tipp auf +10, +25 oder +50 genügt.</p>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">3</span>
+            <h3>Zusehen, wie es wächst</h3>
+            <p>Jedes gelesene Buch kommt ins Regal, und mit jedem Buch schaltest du etwas frei.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="feature wrap">
+        <div class="feature-text reveal">
+          <h2>Jedes Buch bekommt seinen Platz im Regal.</h2>
+          <p>
+            Gelesene Bücher stehen mit ihrem Buchrücken im Regal, ungelesene liegen auf deinem
+            TBR-Stapel im Erdgeschoss. Ein Tipp aufs Regal zeigt alle Titel aus der Nähe.
+          </p>
+        </div>
+        <figure class="phone reveal">
+          <video muted playsinline loop preload="none" poster="images/app/shelf.webp" data-src="images/app/shelf.mp4" width="360" height="770"
+            aria-label="Ein Regal öffnet sich in der Nahansicht: bunte Buchrücken mit Titeln und Autorinnen."></video>
+        </figure>
+      </section>
+
+      <section class="feature feature-flip wrap">
+        <div class="feature-text reveal">
+          <h2>Volle Regale? Dein Turm wächst.</h2>
+          <p>
+            Sind alle Regale eines Stockwerks voll, wächst dein Turm um eine Etage. Von außen
+            ranken Efeu und Rosen an ihm hoch, und der Wald drumherum wächst mit.
+          </p>
+        </div>
+        <div class="phones reveal">
+          <figure class="phone">
+            <video muted playsinline loop preload="none" poster="images/app/grow.webp" data-src="images/app/grow.mp4" width="360" height="770"
+              aria-label="Eine Zauberwolke legt sich um die Turmspitze, und der Turm bekommt ein neues Stockwerk."></video>
+          </figure>
+          <figure class="phone phone-small">
+            <video muted playsinline loop preload="none" poster="images/app/tower.webp" data-src="images/app/tower.mp4" width="360" height="770"
+              aria-label="Ein hoher Turm von außen, mit Efeu und Herbstlaub, das am Himmel vorbeiweht."></video>
+          </figure>
+        </div>
+      </section>
+
+      <section class="feature wrap">
+        <div class="feature-text reveal">
+          <h2>Richte dein Lesezimmer ein.</h2>
+          <p>
+            Ohrensessel, Kerzen, Teppiche, Wände aus Moosstein oder Sternenstein, ein Kamin statt
+            des Fensters – mit jedem Buch, das du beendest, kommt etwas Neues dazu. Du entscheidest,
+            wo es steht und in welcher Farbe.
+          </p>
+        </div>
+        <div class="phones reveal">
+          <figure class="phone">
+            <video muted playsinline loop preload="none" poster="images/app/furnish.webp" data-src="images/app/furnish.mp4" width="360" height="770"
+              aria-label="Im Einrichtungsmodus kommt ein Ohrensessel in den Raum, wechselt die Farbe auf Smaragd und wird verschoben."></video>
+          </figure>
+          <figure class="card-shot">
+            <img src="images/app/unlocks.webp" width="480" height="775" loading="lazy" decoding="async"
+              alt="Neu freigeschaltet: Ohrensessel, Truhe, Nussbaumboden und ein Goldrahmen." />
+          </figure>
+        </div>
+      </section>
+
+      <section class="feature feature-flip wrap">
+        <div class="feature-text reveal">
+          <h2>Gemütlich zu jeder Jahreszeit.</h2>
+          <p>
+            Der Blick aus dem Fenster folgt Tag und Nacht, Frühling, Sommer, Herbst und Winter.
+            Und zu Halloween, im Advent, zu Ostern und zu Mittsommer gibt es besondere Saisons.
+          </p>
+        </div>
+        <div class="phones reveal">
+          <figure class="room-card">
+            <video muted playsinline loop preload="none" poster="images/app/seasons.webp" data-src="images/app/seasons.mp4" width="640" height="568"
+              aria-label="Dasselbe Lesezimmer bei Tag, in der Dämmerung, nachts mit Mond und Sternen, im Winter mit Schnee und im Frühling."></video>
+          </figure>
+          <figure class="card-shot card-shot-small">
+            <img src="images/app/calendar.webp" width="480" height="650" loading="lazy" decoding="async"
+              alt="Saisonkalender: Halloween ab 20. Oktober, Adventskalender ab 1. Dezember, Ostern, Mittsommer." />
+          </figure>
+        </div>
+      </section>
+
+      <section class="feature wrap">
+        <div class="feature-text reveal">
+          <h2>Ein kleines Ich, das mitliest.</h2>
+          <p>
+            Erstelle deinen Avatar. Er spaziert durch dein Lesezimmer, setzt sich in den Sessel und
+            liest. Neue Kleidung, Frisuren und Farben kommen mit jeder Seite, die du erfasst.
+          </p>
+        </div>
+        <figure class="phone reveal">
+          <video muted playsinline loop preload="none" poster="images/app/avatar.webp" data-src="images/app/avatar.mp4" width="360" height="770"
+            aria-label="Der Avatar wechselt beim Erstellen den Hautton."></video>
+        </figure>
+      </section>
+
+      <section class="mystery" aria-labelledby="mystery-title">
+        <div class="wrap mystery-inner">
+          <svg class="egg" viewBox="0 0 120 150" role="img" aria-label="Ein grünes Ei mit hellen Flecken in einem goldenen Nest.">
+            <ellipse cx="60" cy="132" rx="50" ry="14" fill="#c9a227" />
+            <ellipse cx="60" cy="128" rx="38" ry="9" fill="#8a6b17" opacity=".45" />
+            <g class="egg-body">
+              <path d="M60 12c26 0 42 38 42 70 0 26-18 44-42 44S18 108 18 82c0-32 16-70 42-70z" fill="#2f6b4f" stroke="#1f4036" stroke-width="3" />
+              <ellipse cx="44" cy="58" rx="7" ry="5" fill="#7db46c" opacity=".7" />
+              <ellipse cx="72" cy="84" rx="9" ry="6" fill="#7db46c" opacity=".7" />
+              <ellipse cx="52" cy="100" rx="5" ry="4" fill="#7db46c" opacity=".7" />
+              <ellipse cx="46" cy="40" rx="6" ry="10" fill="#fff" opacity=".18" transform="rotate(-20 46 40)" />
+            </g>
+          </svg>
+          <div>
+            <h2 id="mystery-title">Im Erdgeschoss wartet etwas.</h2>
+            <p>
+              Gleich zu Beginn liegt ein Ei in deinem Lesezimmer. Mit jeder Seite, die du erfasst,
+              wird es ein bisschen wärmer.
+            </p>
+            <p class="whisper">Was daraus schlüpft? Das verraten wir nicht. Lies es selbst heraus.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="friends wrap" aria-labelledby="friends-title">
+        <h2 id="friends-title">Lesen ist schöner zusammen.</h2>
         <div class="features">
-          <article class="feature">
-            <h3>Deine Bibliothek</h3>
-            <p>
-              Bücher per ISBN-Scan oder Suche hinzufügen, Lesefortschritt festhalten, bewerten,
-              Notizen schreiben und verliehene Bücher im Blick behalten.
-            </p>
+          <article class="feature-card">
+            <h3>Türme besuchen</h3>
+            <p>Schau dir die Lesezimmer deiner Freund*innen an – und was gerade auf ihrem Stapel liegt.</p>
           </article>
-          <article class="feature">
-            <h3>Das Lesezimmer</h3>
-            <p>
-              Ein Turmzimmer, das mit deinen Büchern wächst. Richte es ein, schalte Möbel, Teppiche
-              und Kaminfeuer frei – der Blick aus dem Fenster folgt Tages- und Jahreszeit.
-            </p>
+          <article class="feature-card">
+            <h3>Bücher empfehlen</h3>
+            <p>Schick ein Buch mit einer Notiz. Mit einem Tipp landet es auf der Leseliste.</p>
           </article>
-          <article class="feature">
-            <h3>Dein Drache</h3>
-            <p>
-              Aus dem Ei schlüpft ein kleiner Drache, der mit jeder gelesenen Seite wächst und
-              irgendwann ein eigenes Schloss bewohnt.
-            </p>
+          <article class="feature-card">
+            <h3>Monatsrangliste</h3>
+            <p>Wer erfasst diesen Monat die meisten Seiten? Ganz ohne Druck, versprochen.</p>
           </article>
-          <article class="feature">
-            <h3>Mit Freunden</h3>
-            <p>
-              Mit einem Konto bleiben Bibliothek und Turm auf allen Geräten gleich. Finde Freunde,
-              empfiehl ihnen Bücher und besuche ihre Türme.
-            </p>
+          <article class="feature-card">
+            <h3>Du entscheidest</h3>
+            <p>Was Freunde sehen, legst du selbst fest. Ohne Konto bleibt alles auf deinem Handy.</p>
           </article>
+        </div>
+      </section>
+
+      <section class="faq wrap narrow" aria-labelledby="faq-title">
+        <h2 id="faq-title">Gut zu wissen</h2>
+        <details>
+          <summary>Lese ich die Bücher in der App?</summary>
+          <p>
+            Nein. Du liest wie gewohnt, auf Papier, dem E-Reader oder als Hörbuch, und erfasst in
+            Bookspire nur, wie weit du bist.
+          </p>
+        </details>
+        <details>
+          <summary>Kann ich meine Bibliothek mitnehmen?</summary>
+          <p>
+            Ja. Bookspire importiert deine Bücher aus Goodreads, BookBuddy oder jeder CSV-Datei.
+            Bücher, die schon da sind, werden übersprungen.
+          </p>
+        </details>
+        <details>
+          <summary>Brauche ich ein Konto?</summary>
+          <p>
+            Nein. Ohne Konto bleibt alles auf deinem Gerät. Mit Konto bleiben Bibliothek und Turm
+            auf allen Geräten gleich, und du kannst Freunde finden.
+          </p>
+        </details>
+        <details>
+          <summary>Was kostet Bookspire?</summary>
+          <p>
+            Zum Start ist Bookspire kostenlos. Kommen später kostenpflichtige Extras dazu, sagen wir
+            das vorher an.
+          </p>
+        </details>
+        <details>
+          <summary>Wann kann ich loslegen?</summary>
+          <p>
+            Bookspire kommt bald in den App Store und zu Google Play. Trag dich in die Warteliste ein,
+            dann schreiben wir dir, sobald es so weit ist.
+          </p>
+        </details>
+      </section>
+
+      <section id="warteliste" class="waitlist" aria-labelledby="waitlist-title">
+        <div class="wrap narrow">
+          <h2 id="waitlist-title">Sei dabei, wenn der Turm öffnet.</h2>
+          <p>Wir schreiben dir einmal, sobald Bookspire im Store ist. Kein Spam, versprochen.</p>
+          <form class="waitlist-form" novalidate>
+            <label class="visually-hidden" for="email">E-Mail-Adresse</label>
+            <input id="email" name="email" type="email" autocomplete="email" required placeholder="deine@email.de" />
+            <!-- Left empty by people; bots fill it in. -->
+            <input class="trap" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <button class="button" type="submit">Eintragen</button>
+          </form>
+          <p class="fine">
+            Nach dem Eintragen bekommst du eine E-Mail mit einem Bestätigungslink. Abmelden geht
+            jederzeit. Mehr dazu in der <a href="datenschutz.html#warteliste">Datenschutzerklärung</a>.
+          </p>
+          <p class="form-status" role="status" aria-live="polite"></p>
         </div>
       </section>
     </main>
@@ -97,5 +293,7 @@
         </nav>
       </div>
     </footer>
+
+    <script src="site.js" defer></script>
   </body>
 </html>

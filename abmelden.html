@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Von der Warteliste abmelden – Bookspire</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#2f5d50" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-waitlist="leave">
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="./">
+          <img src="images/logo-80.png" alt="" width="40" height="40" />
+          Bookspire
+        </a>
+      </div>
+    </header>
+
+    <main class="wrap narrow legal">
+      <h1>Von der Warteliste abmelden</h1>
+      <p data-state="loading">Einen Moment …</p>
+      <div data-state="done" hidden>
+        <p>Du bist abgemeldet. Deine Adresse ist gelöscht, wir schreiben dir nicht mehr.</p>
+        <p><a href="./">Zurück zur Startseite</a></p>
+      </div>
+      <div data-state="invalid" hidden>
+        <p>Diese Adresse steht nicht (mehr) auf der Warteliste. Du musst nichts weiter tun.</p>
+      </div>
+      <div data-state="failed" hidden>
+        <p>Das hat gerade nicht geklappt. Bitte lade die Seite gleich noch einmal.</p>
+      </div>
+    </main>
+
+    <script src="site.js" defer></script>
+  </body>
+</html>
