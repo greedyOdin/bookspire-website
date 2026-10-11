@@ -401,7 +401,8 @@ figure {
   box-shadow: 0 8px 0 var(--shadow), 0 18px 40px rgba(58, 50, 38, 0.18);
 }
 
-.phone video {
+.phone video,
+.phone img {
   display: block;
   width: 100%;
   height: auto;
@@ -426,6 +427,12 @@ figure {
 
 .card-shot-small {
   width: min(10rem, 30vw);
+}
+
+/* A wide card from the app below a feature's text, such as the reading goal. */
+.card-shot-wide {
+  width: min(22rem, 100%);
+  margin-top: 1.5rem;
 }
 
 .card-shot img {
@@ -498,6 +505,12 @@ figure {
 .egg-body {
   transform-box: fill-box;
   transform-origin: 50% 100%;
+}
+
+/* Book tracker: the feature row, then its cards */
+
+.tracker .features {
+  margin-top: clamp(2rem, 6vw, 3.5rem);
 }
 
 /* Friends */
