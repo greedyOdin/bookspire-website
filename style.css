@@ -163,7 +163,8 @@ h3 {
 
 .site-footer nav {
   display: flex;
-  gap: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
 }
 
 /* Landing page */

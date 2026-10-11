@@ -1,6 +1,7 @@
 # bookspire.de
 
-Webseite der App Bookspire: Startseite, Datenschutzerklärung und Impressum.
+Webseite der App Bookspire: Startseite, Nutzungsbedingungen, Datenschutzerklärung,
+Impressum und eine Seite zum Löschen des Kontos (für Google Play).
 Reines HTML und CSS, ohne Build-Schritt, veröffentlicht über GitHub Pages
 unter der Domain aus `CNAME`.
 
