@@ -32,6 +32,8 @@ fonts/           Fraunces und Nunito als WOFF2 (Latein und Umlaute), Lizenz OFL
 images/          Logo (logo.png, logo-80.png für die Kopfzeile), Icons,
                  og.jpg / og-en.jpg (Vorschaubilder zum Teilen, 1200×630)
 images/app/      Clips (MP4) und Standbilder (WebP) aus der App
+images/app/en/   dieselben Motive mit englischer App-Oberfläche (für en/);
+                 Raum, Saisons und Turmwachstum ohne Text teilen sich beide
 CNAME            bookspire.de
 ```
 
@@ -79,6 +81,13 @@ Turmwachstum) besser am Handy per Bildschirmaufnahme aufnehmen.
    (oder `-ss SEKUNDE` statt `-sseof`)
 
 Ein Clip sollte unter etwa 150 KB bleiben.
+
+Für die englische Seite dieselben Motive mit App-Sprache Englisch aufnehmen
+(Profil → Sprache, danach zurückstellen) und nach `images/app/en/` legen. Die
+Buchtitel des Testkontos sind deutsch und bleiben es in Regal, Bibliothek und
+Statistik (Stand 12.10.2026). „Neu freigeschaltet“ erscheint nur, wenn die
+Zahl gelesener Bücher steigt: ein Buch kurz auf „Gelesen“ setzen, danach
+zurück.
 
 ## Warteliste
 
