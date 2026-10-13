@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Only pages search engines should list; imprint and waitlist pages are noindex. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://bookspire.de/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bookspire.de/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookspire.de/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookspire.de/" />
+  </url>
+  <url>
+    <loc>https://bookspire.de/en/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bookspire.de/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookspire.de/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookspire.de/" />
+  </url>
+  <url>
+    <loc>https://bookspire.de/datenschutz.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bookspire.de/datenschutz.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookspire.de/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookspire.de/datenschutz.html" />
+  </url>
+  <url>
+    <loc>https://bookspire.de/en/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bookspire.de/datenschutz.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookspire.de/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookspire.de/datenschutz.html" />
+  </url>
+  <url>
+    <loc>https://bookspire.de/nutzungsbedingungen.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bookspire.de/nutzungsbedingungen.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookspire.de/en/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookspire.de/nutzungsbedingungen.html" />
+  </url>
+  <url>
+    <loc>https://bookspire.de/en/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bookspire.de/nutzungsbedingungen.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookspire.de/en/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookspire.de/nutzungsbedingungen.html" />
+  </url>
+  <url>
+    <loc>https://bookspire.de/konto-loeschen.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bookspire.de/konto-loeschen.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookspire.de/en/delete-account.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookspire.de/konto-loeschen.html" />
+  </url>
+  <url>
+    <loc>https://bookspire.de/en/delete-account.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bookspire.de/konto-loeschen.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookspire.de/en/delete-account.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookspire.de/konto-loeschen.html" />
+  </url>
+</urlset>

@@ -159,6 +159,56 @@ h3 {
   font-size: 0.95rem;
 }
 
+/* Hint to the other language (site.js); fixed, so it never pushes the page around. */
+.lang-hint {
+  position: fixed;
+  z-index: 10;
+  left: 1rem;
+  right: 1rem;
+  bottom: calc(1rem + env(safe-area-inset-bottom));
+  max-width: 30rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.75rem;
+  padding: 0.75rem 3rem 0.75rem 1.1rem;
+  border-radius: 1.25rem;
+  background: var(--card);
+  box-shadow: 0 4px 0 var(--shadow), 0 8px 24px rgb(0 0 0 / 0.12);
+  font-size: 0.95rem;
+}
+
+.lang-hint-close {
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  translate: 0 -50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lang-hint {
+    animation: lang-hint-in 0.4s ease-out 0.8s both;
+  }
+}
+
+@keyframes lang-hint-in {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+}
+
 .site-footer {
   margin-top: 4rem;
   padding: 2rem 0 3rem;

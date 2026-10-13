@@ -58,6 +58,31 @@ const TEXT = english
       failed: 'Das hat nicht geklappt. Bitte versuch es gleich noch einmal.',
     };
 
+// A quiet hint when the browser prefers the other language. Shown only to visitors who arrive
+// from elsewhere, so nothing needs to be stored to keep it from coming back on every page.
+const switchLink = document.querySelector('.lang');
+const preferred = (navigator.languages?.[0] || navigator.language || '').toLowerCase();
+const arrivedFromElsewhere = !document.referrer.startsWith(location.origin);
+if (switchLink && preferred && preferred.startsWith('de') === english && arrivedFromElsewhere) {
+  const hint = document.createElement('aside');
+  hint.className = 'lang-hint';
+  hint.lang = english ? 'de' : 'en';
+  const text = document.createElement('span');
+  text.textContent = english ? 'Diese Seite gibt es auch auf Deutsch.' : 'This page is also available in English.';
+  const link = document.createElement('a');
+  link.href = switchLink.href;
+  link.hreflang = hint.lang;
+  link.textContent = english ? 'Auf Deutsch lesen' : 'Read in English';
+  const close = document.createElement('button');
+  close.type = 'button';
+  close.className = 'lang-hint-close';
+  close.setAttribute('aria-label', english ? 'Schließen' : 'Close');
+  close.textContent = '×';
+  close.addEventListener('click', () => hint.remove());
+  hint.append(text, link, close);
+  document.body.append(hint);
+}
+
 const form = document.querySelector('.waitlist-form');
 if (form) {
   const status = document.querySelector('.form-status');

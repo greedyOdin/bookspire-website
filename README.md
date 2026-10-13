@@ -16,9 +16,15 @@ veröffentlicht über GitHub Pages unter der Domain aus `CNAME`.
 | `konto-loeschen.html` | `en/delete-account.html` | Konto löschen ohne App (verlangt Google Play) |
 | `bestaetigen.html` | `en/confirm.html` | Link aus der Bestätigungsmail der Warteliste |
 | `abmelden.html` | `en/unsubscribe.html` | Abmeldelink der Warteliste |
+| `404.html` | (dieselbe) | Fehlerseite für alle fehlenden Adressen, zweisprachig, nur absolute Pfade |
 
-Jede Seite hat oben rechts einen Umschalter zur anderen Sprache und
-`hreflang`-Verweise. Die englischen Rechtstexte weisen darauf hin, dass die
+Jede Seite hat oben rechts einen Umschalter zur anderen Sprache. Die
+indexierbaren Paare (Start, Datenschutz, Nutzungsbedingungen, Konto löschen)
+haben `canonical` und `hreflang` für de, en und `x-default` (= Deutsch); dieselben
+Paare stehen in `sitemap.xml`. Neue Seiten dort mit eintragen, `noindex`-Seiten
+nicht. Bevorzugt der Browser die andere Sprache, blendet `site.js` auf den
+Startseiten unten einen Hinweis ein – nur bei Besuch von außerhalb
+(`document.referrer`), ohne Cookie oder localStorage. Die englischen Rechtstexte weisen darauf hin, dass die
 deutsche Fassung verbindlich ist. Die App öffnet die Rechtstexte in ihrer
 Sprache (`legalUrl` in `src/constants/links.ts` im App-Repo) – Adressen
 deshalb nicht umbenennen.
@@ -27,7 +33,9 @@ deshalb nicht umbenennen.
 
 ```
 style.css        alle Stile; Farben wie in der App, helles und dunkles Schema
-site.js          Clips beim Hinscrollen laden, Warteliste, Bestätigen/Abmelden
+site.js          Clips beim Hinscrollen laden, Warteliste, Bestätigen/Abmelden,
+                 Hinweis auf die andere Sprache
+robots.txt       erlaubt alles, verweist auf sitemap.xml
 fonts/           Fraunces und Nunito als WOFF2 (Latein und Umlaute), Lizenz OFL
 images/          Logo (logo.png, logo-80.png für die Kopfzeile), Icons,
                  og.jpg / og-en.jpg (Vorschaubilder zum Teilen, 1200×630)
@@ -84,8 +92,10 @@ Ein Clip sollte unter etwa 150 KB bleiben.
 
 Für die englische Seite dieselben Motive mit App-Sprache Englisch aufnehmen
 (Profil → Sprache, danach zurückstellen) und nach `images/app/en/` legen. Die
-Buchtitel des Testkontos sind deutsch und bleiben es in Regal, Bibliothek und
-Statistik (Stand 12.10.2026). „Neu freigeschaltet“ erscheint nur, wenn die
+Buchtitel des Testkontos sind deutsch; Motive mit Titeln (Regal, Bibliothek,
+Statistik) deshalb in einem eigenen Android-Benutzerprofil ohne Anmeldung
+aufnehmen (`pm create-user`), dort englische Test-CSVs importieren und das Profil
+danach löschen – so bleibt „tester“ unberührt (Stand 13.10.2026). „Neu freigeschaltet“ erscheint nur, wenn die
 Zahl gelesener Bücher steigt: ein Buch kurz auf „Gelesen“ setzen, danach
 zurück.
 
