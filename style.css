@@ -493,6 +493,46 @@ figure {
   box-shadow: 0 6px 0 var(--shadow), 0 14px 30px rgba(58, 50, 38, 0.15);
 }
 
+/* Recap cards fanned out like story pictures: the middle one in front, the others tilted behind. */
+.story-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 1rem;
+}
+
+.story-card {
+  width: min(10rem, 34vw);
+  flex-shrink: 0;
+}
+
+.story-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1.1rem;
+  box-shadow: 0 6px 0 var(--shadow), 0 14px 30px rgba(58, 50, 38, 0.18);
+}
+
+.story-card:first-child {
+  transform: translateX(18%) rotate(-7deg) scale(0.9);
+}
+
+.story-card:nth-child(2) {
+  position: relative;
+  z-index: 1;
+}
+
+.story-card:last-child {
+  transform: translateX(-18%) rotate(7deg) scale(0.9);
+}
+
+@media (min-width: 52rem) {
+  .story-card {
+    width: 11.5rem;
+  }
+}
+
 .room-card {
   flex: 1;
   min-width: 0;
