@@ -58,6 +58,9 @@ CNAME            bookspire.de
   99 / 100 / 100 / 100, 337 KB beim ersten Laden. Dafür:
   - Clips mit `preload="none"` und `data-src`; `site.js` lädt sie erst kurz
     vor dem Sichtbarwerden und pausiert sie außerhalb des Bildes
+  - Clips sind Deko: `disablepictureinpicture` und `disableremoteplayback`,
+    damit Browser beim Hovern kein Bild-in-Bild anbieten. Das „Verbessern“ von
+    Edge (Videoverbesserung) lässt sich von der Seite aus nicht abschalten
   - Animationen nur per CSS und nur mit `transform` und `opacity`; alles in
     `@media (prefers-reduced-motion: no-preference)`, sonst Standbilder
   - Überschrift und Einleitung oben nicht animieren (sie bestimmen, wann die
