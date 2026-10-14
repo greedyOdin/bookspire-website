@@ -110,7 +110,22 @@ zurück.
 - Ob eine Adresse schon eingetragen ist, verrät die Seite nie. Ein verstecktes
   Feld fängt Bots ab, höchstens 200 neue Einträge pro Stunde.
 - Zum Store-Start: bestätigte Adressen exportieren und einmal anschreiben,
-  jede Mail mit dem Abmeldelink `abmelden.html?t=<token>`.
+  jede Mail mit dem Abmeldelink `abmelden.html?t=<token>` und dem Code für das
+  Set „Erste Seite“ (Spalte `code`, als XXXX-XXXX; einmal einlösbar, siehe
+  `supabase/13-first-page.sql` und `14-first-page-once.sql` im App-Repo).
+
+### Set „Erste Seite“ als Anreiz
+
+- Oben neben „Auf die Warteliste“ eine kleine goldene Zeile mit Federkiel
+  („Wer sich vor dem Start einträgt, bekommt ein Set, das es sonst nie gibt.“),
+  die zur Warteliste springt (`.cta-notes`, `.gift`); bewusst ohne Namen, Bild,
+  Countdown oder Banner
+- In der Frage „Wann kann ich loslegen?“ ein Satz mit Link zur Warteliste
+- Bei der Warteliste selbst Bild und Satz zum Set (`.set-picture`,
+  `.set-note`). Das Bild ist Inline-SVG, gezeichnet aus den Formen der App
+  (Teppich `firstPage`, Avatar im `readingCloak` mit `goldenQuill`); neu
+  erzeugen, wenn sich die Zeichnungen in der App ändern: per Jest-Test mit
+  `react-dom/server` rendern (react-native-svg auf kleine SVG-Tags gemockt)
 
 ## Vorschaubilder zum Teilen
 

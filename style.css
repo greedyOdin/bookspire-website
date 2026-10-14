@@ -315,6 +315,34 @@ h3 {
   font-size: 0.95rem;
 }
 
+.cta-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+/* A hint at the set "Erste Seite"; the details wait at the waitlist. */
+.gift {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  color: var(--brass-text);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.gift:hover {
+  text-decoration: underline;
+}
+
+.gift .quill {
+  flex: none;
+  width: 0.95em;
+  height: 0.95em;
+  transform: translateY(0.1em);
+}
+
 .hero-room {
   position: relative;
 }
