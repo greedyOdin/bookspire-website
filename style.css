@@ -673,6 +673,23 @@ figure {
   margin-top: 0;
 }
 
+/* The set "Erste Seite", only for the waitlist. */
+.set-picture {
+  display: block;
+  width: min(100%, 18rem);
+  height: auto;
+  margin: 1.5rem auto 0.5rem;
+}
+
+.set-note {
+  max-width: 34rem;
+  margin-inline: auto;
+}
+
+.set-note strong {
+  color: var(--heading);
+}
+
 .waitlist-form {
   display: flex;
   flex-wrap: wrap;
