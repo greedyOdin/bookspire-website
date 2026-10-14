@@ -137,6 +137,11 @@ abfotografieren, dann als JPEG speichern.
 
 ## Domain und Veröffentlichung
 
+- Wer `style.css` ändert, zählt in allen Seiten die Version im Link hoch
+  (`style.css?v=JJJJMMTTNN`). GitHub Pages lässt Browser die Datei 10 Minuten
+  zwischenspeichern; ohne neue Version kommt neues HTML mit altem CSS an
+  (so war am 14.10.2026 der Federkiel neben dem Knopf riesig). SVGs bekommen
+  deshalb auch `width`/`height` im HTML
 - Jeder Push auf `main` veröffentlicht die Seite (GitHub Pages, Quelle: Wurzel
   von `main`).
 - Domain bei IONOS. DNS: vier A-Einträge auf `185.199.108–111.153`, vier
