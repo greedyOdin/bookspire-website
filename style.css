@@ -315,14 +315,14 @@ h3 {
   font-size: 0.95rem;
 }
 
+/* "Coming soon" sits next to the button, the hint at the set on its own row below. */
 .cta-notes {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+  display: contents;
 }
 
 /* A hint at the set "Erste Seite"; the details wait at the waitlist. */
 .gift {
+  flex-basis: 100%;
   display: inline-flex;
   align-items: baseline;
   gap: 0.35rem;
