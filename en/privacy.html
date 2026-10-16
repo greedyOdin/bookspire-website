@@ -111,8 +111,9 @@
         If neither knows a book, the app asks Google Books (Google Ireland Limited, Gordon House,
         Barrow Street, Dublin 4, Ireland) through our server. Your device sends the search term, the
         ISBN or title and author to our server at Supabase in Ireland (see “Where the data is
-        stored” in section 4), which passes them on to Google without your IP address. Google only
-        learns what was searched for, not by whom. Our server does not store these requests;
+        stored” in section 4), which passes them on to Google without your IP address. Only the cover
+        images of these results are loaded by your device directly from Google, which sends your
+        IP address to Google. Our server does not store these requests;
         Supabase keeps short-lived logs of calls to find errors. This applies with or without an
         account (Art. 6(1)(b) GDPR).
       </p>
