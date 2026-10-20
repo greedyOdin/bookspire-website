@@ -767,6 +767,108 @@ figure {
   margin-top: 0;
 }
 
+/* Bookspire Gilde: its own page and a short section on the landing page */
+
+/* A big picture on its own: the guild tower (drawn from the app's shapes) or a room. */
+.picture-card {
+  justify-self: center;
+  width: min(22rem, 100%);
+}
+
+.picture-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1.75rem;
+  background: var(--surface);
+  box-shadow: 0 8px 0 var(--shadow), 0 18px 40px rgba(58, 50, 38, 0.18);
+}
+
+/* One card from the guild statistics, cut from the app. */
+.card-shot-stats {
+  justify-self: center;
+  width: min(22rem, 100%);
+}
+
+.compare h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.compare-cards {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 46rem) {
+  .compare-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.compare-card {
+  background: var(--card);
+  border-radius: 1.25rem;
+  padding: 1.25rem 1.25rem 0.75rem;
+  box-shadow: 0 4px 0 var(--shadow);
+}
+
+/* The guild's card wears its gold, like the guild pieces in the app. */
+.compare-guild {
+  box-shadow: 0 0 0 2px var(--brass), 0 6px 0 var(--shadow);
+}
+
+.compare-card h3 {
+  margin-top: 0;
+}
+
+.compare-guild h3 {
+  color: var(--brass-text);
+}
+
+.compare-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.compare-card li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.6rem;
+  color: var(--text-secondary);
+}
+
+.compare-card li::before {
+  content: '';
+  position: absolute;
+  left: 0.15rem;
+  top: 0.5em;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--leaf);
+}
+
+.compare-guild li::before {
+  background: var(--brass);
+  clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+  border-radius: 0;
+  width: 0.85rem;
+  height: 0.85rem;
+  top: 0.4em;
+  left: 0.1rem;
+}
+
+.guild-page .waitlist .button {
+  margin-top: 0.5rem;
+}
+
+.guild-teaser .feature-text .button {
+  margin-top: 0.5rem;
+}
+
 /* Motion: only transform and opacity, and only for those who want it */
 
 @media (prefers-reduced-motion: no-preference) {

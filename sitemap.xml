@@ -49,4 +49,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://bookspire.de/en/delete-account.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bookspire.de/konto-loeschen.html" />
   </url>
+  <url>
+    <loc>https://bookspire.de/gilde.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bookspire.de/gilde.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookspire.de/en/guild.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookspire.de/gilde.html" />
+  </url>
+  <url>
+    <loc>https://bookspire.de/en/guild.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://bookspire.de/gilde.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookspire.de/en/guild.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookspire.de/gilde.html" />
+  </url>
 </urlset>
