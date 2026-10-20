@@ -790,18 +790,6 @@ figure {
   width: min(22rem, 100%);
 }
 
-/* What stays free, said once and calmly before the guild has its say. */
-.free-note p {
-  margin: 0;
-  padding: 1.25rem 1.5rem;
-  border-left: 4px solid var(--leaf);
-  border-radius: 0.75rem;
-  background: var(--card);
-  box-shadow: 0 4px 0 var(--shadow);
-  color: var(--text-secondary);
-  font-size: 1.1rem;
-}
-
 /* Two cards side by side from medium widths on, never four in a row. */
 @media (min-width: 60rem) {
   .features-two {
