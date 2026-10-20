@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Confirm the waitlist – Bookspire</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#2f5d50" />
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+    <link rel="stylesheet" href="../style.css?v=2026101601" />
+  </head>
+  <body data-waitlist="confirm">
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="./">
+          <img src="../images/logo-80.png" alt="" width="40" height="40" />
+          Bookspire
+        </a>
+      </div>
+    </header>
+
+    <main class="wrap narrow legal">
+      <h1>Confirm the waitlist</h1>
+      <p data-state="loading">One moment …</p>
+      <div data-state="done" hidden>
+        <p>Thank you, you are on the waitlist! We will write to you once Bookspire is in the App Store and on Google Play.</p>
+        <p><a href="./">Back to the home page</a></p>
+      </div>
+      <div data-state="invalid" hidden>
+        <p>This link is no longer valid. Maybe you unsubscribed already, or the entry was older than 7 days. <a href="./#waitlist">Just sign up again.</a></p>
+      </div>
+      <div data-state="failed" hidden>
+        <p>That did not work just now. Please reload the page in a moment.</p>
+      </div>
+    </main>
+
+    <script src="../site.js" defer></script>
+  </body>
+</html>

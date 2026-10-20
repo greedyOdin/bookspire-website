@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Leave the waitlist – Bookspire</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#2f5d50" />
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+    <link rel="stylesheet" href="../style.css?v=2026101601" />
+  </head>
+  <body data-waitlist="leave">
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="./">
+          <img src="../images/logo-80.png" alt="" width="40" height="40" />
+          Bookspire
+        </a>
+      </div>
+    </header>
+
+    <main class="wrap narrow legal">
+      <h1>Leave the waitlist</h1>
+      <p data-state="loading">One moment …</p>
+      <div data-state="done" hidden>
+        <p>You are unsubscribed. Your address has been deleted and we will not write to you again.</p>
+        <p><a href="./">Back to the home page</a></p>
+      </div>
+      <div data-state="invalid" hidden>
+        <p>This address is not (or no longer) on the waitlist. There is nothing else you need to do.</p>
+      </div>
+      <div data-state="failed" hidden>
+        <p>That did not work just now. Please reload the page in a moment.</p>
+      </div>
+    </main>
+
+    <script src="../site.js" defer></script>
+  </body>
+</html>
