@@ -336,6 +336,21 @@ h3 {
   text-decoration: underline;
 }
 
+/* On a phone the line breaks by itself, evenly; the fixed break is only for the wide hero. */
+.gift span {
+  text-wrap: balance;
+}
+
+.gift br {
+  display: none;
+}
+
+@media (min-width: 52rem) {
+  .gift br {
+    display: inline;
+  }
+}
+
 .gift .quill {
   flex: none;
   width: 0.95em;
