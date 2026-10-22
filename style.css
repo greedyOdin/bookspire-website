@@ -582,6 +582,41 @@ figure {
   max-width: 26rem;
 }
 
+/* Maker: who builds Bookspire */
+
+.maker {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.maker h2 {
+  margin-top: 0;
+}
+
+.maker p {
+  margin: 0.5rem 0;
+}
+
+.maker-photo {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 6px var(--surface);
+}
+
+@media (min-width: 46rem) {
+  .maker {
+    grid-template-columns: auto 1fr;
+    justify-items: start;
+    text-align: left;
+    gap: 2.5rem;
+  }
+}
+
 /* Mystery: only the egg, nothing that hatches */
 
 .mystery {
