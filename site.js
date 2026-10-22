@@ -49,12 +49,14 @@ const TEXT = english
       sending: 'One moment …',
       invalid: 'That does not look like an email address.',
       done: 'Almost there! Check your inbox and confirm with the link.',
+      later: 'Almost there! Many people are signing up today, so your confirmation email may take until tomorrow.',
       failed: 'That did not work. Please try again in a moment.',
     }
   : {
       sending: 'Einen Moment …',
       invalid: 'Das sieht nicht nach einer E-Mail-Adresse aus.',
       done: 'Fast geschafft! Schau in dein Postfach und bestätige mit dem Link.',
+      later: 'Fast geschafft! Heute tragen sich besonders viele ein, deshalb kann deine Bestätigungsmail bis morgen dauern.',
       failed: 'Das hat nicht geklappt. Bitte versuch es gleich noch einmal.',
     };
 
@@ -103,8 +105,10 @@ if (form) {
     button.disabled = true;
     status.textContent = TEXT.sending;
     try {
-      await callSupabase('join_waitlist', { address, lang: english ? 'en' : 'de' });
-      status.textContent = TEXT.done;
+      // Which profile link led here (bookspire.de/?via=instagram), to see which ones reach people.
+      const via = new URLSearchParams(location.search).get('via');
+      const answer = await callSupabase('join_waitlist', { address, lang: english ? 'en' : 'de', via });
+      status.textContent = answer === 'later' ? TEXT.later : TEXT.done;
       form.reset();
     } catch {
       status.textContent = TEXT.failed;
