@@ -1,4 +1,5 @@
-// Bookspire's website: clips that play only while seen, and the waitlist form.
+// Bookspire's website: clips that play only while seen, the waitlist form, and where
+// visitors came from (also loaded by the guild page, which leads to the waitlist).
 // The key below is Supabase's public key, the same the app ships with: what it may do is
 // limited by the database's row-level security. This page only calls the waitlist functions.
 const SUPABASE_URL = 'https://aqmfowqczfvkqowdbbmb.supabase.co';
@@ -60,6 +61,20 @@ const TEXT = english
       failed: 'Das hat nicht geklappt. Bitte versuch es gleich noch einmal.',
     };
 
+// Which profile link led here (bookspire.de/?via=instagram), to see which ones reach people.
+// It rides along in the links to our other pages, so switching the language or looking at
+// the guild page first does not lose it; nothing is stored.
+const via = new URLSearchParams(location.search).get('via');
+if (via) {
+  for (const link of document.querySelectorAll('a[href]')) {
+    const url = new URL(link.href, location.href);
+    if (url.origin === location.origin && !url.searchParams.has('via')) {
+      url.searchParams.set('via', via);
+      link.href = url.href;
+    }
+  }
+}
+
 // A quiet hint when the browser prefers the other language. Shown only to visitors who arrive
 // from elsewhere, so nothing needs to be stored to keep it from coming back on every page.
 const switchLink = document.querySelector('.lang');
@@ -105,8 +120,6 @@ if (form) {
     button.disabled = true;
     status.textContent = TEXT.sending;
     try {
-      // Which profile link led here (bookspire.de/?via=instagram), to see which ones reach people.
-      const via = new URLSearchParams(location.search).get('via');
       const answer = await callSupabase('join_waitlist', { address, lang: english ? 'en' : 'de', via });
       status.textContent = answer === 'later' ? TEXT.later : TEXT.done;
       form.reset();
