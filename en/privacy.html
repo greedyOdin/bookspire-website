@@ -121,11 +121,13 @@
         account (Art. 6(1)(b) GDPR).
       </p>
       <p>
-        If a search finds nothing that fits, for example because of a typo, the app also sends the
-        search term to our server at Supabase in Ireland. A list of known book titles, built from
-        the freely available Open Library data, suggests the title you meant there. Our server does
-        not store the search term; Supabase keeps short-lived logs of calls to find errors. This
-        applies with or without an account (Art. 6(1)(b) GDPR).
+        The app also sends the search term or the ISBN to our server at Supabase in Ireland. The
+        Bookspire catalog is there, with books readers entered themselves (see “The Bookspire
+        catalog” in section 4). If a search finds nothing that fits, for example because of a typo,
+        a list of known book titles there, built from the freely available Open Library data, also
+        suggests the title you meant. Our server does not store the search term; Supabase keeps
+        short-lived logs of calls to find errors. This applies with or without an account
+        (Art. 6(1)(b) GDPR).
       </p>
 
       <h3>Camera</h3>
@@ -163,6 +165,7 @@
           iPhone, iPad, Android device or browser, and when it was last synced
         </li>
         <li>friendships, recommendations to friends, blocks and reports</li>
+        <li>which books you contributed to the Bookspire catalog (see below)</li>
         <li>whether and until when you are a member of the Bookspire Guild, and which guild code you redeemed</li>
       </ul>
 
@@ -172,6 +175,19 @@
         your library, your tower, your activity and your friends list. If you are in the Bookspire
         Guild, your friends see that unless you turn it off; they do not see how long your membership
         runs or how you joined. Nobody but you sees your email address.
+      </p>
+
+      <h3>The Bookspire catalog</h3>
+      <p>
+        If the search cannot find a book and you enter it yourself with an account, you can make it
+        findable for others. The switch for this is in the form and is on by default. Title,
+        subtitle, authors, series and volume, publisher, year, page count, language and ISBN then go
+        into the Bookspire catalog, which everyone finds in the search. Your name, reading status,
+        rating, notes, dates and cover do not. Separately, we store that your account contributed
+        the book, to limit contributions per day and prevent abuse; nobody but us can see this
+        (Art. 6(1)(f) GDPR). If you report an entry as wrong or inappropriate, we handle it like
+        any other report. If you delete your account, the link to your account is removed; the
+        book details stay in the catalog, as they say nothing about you.
       </p>
 
       <h3>Where the data is stored</h3>
@@ -184,13 +200,14 @@
       <p>
         Sign-in emails are sent by Mailjet (Sinch Mailjet SAS, 13-13 bis, rue de l'Aubrac,
         75012 Paris, France) as our processor. Through Mailjet we also receive reports you make
-        about other people as an email, so we can review them quickly.
+        about other people or catalog entries as an email, so we can review them quickly.
       </p>
 
       <h3>Deleting your account</h3>
       <p>
         You can delete your account at any time in the app under Profile. Your profile, library,
-        reading room, reading days, friendships, recommendations and your guild membership are then removed from the
+        reading room, reading days, friendships, recommendations, your guild membership and the link to your
+        contributions to the Bookspire catalog are then removed from the
         server immediately. The data on your device stays until you delete it there. Without the
         app, you can ask by email, see <a href="delete-account.html">Delete your account</a>.
       </p>
