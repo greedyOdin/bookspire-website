@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["UW847GN5F3.com.greedyodin.bookspire"],
+        "components": [{ "/": "/join*" }]
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.greedyodin.bookspire",
+      "sha256_cert_fingerprints": [
+        "B1:10:65:1C:FB:82:32:49:DF:ED:DC:8F:96:60:CD:16:09:F0:50:0F:08:FC:B6:9C:69:97:78:3C:0B:25:F5:D9"
+      ]
+    }
+  }
+]

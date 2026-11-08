@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Einladung in einen Buchclub – Bookspire</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#2f5d50" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/style.css?v=2026102003" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/">
+          <img src="/images/logo-80.png" alt="" width="40" height="40" />
+          Bookspire
+        </a>
+      </div>
+    </header>
+
+    <main class="wrap narrow legal">
+      <h1>Du bist in einen Buchclub eingeladen.</h1>
+      <p>
+        Hast du Bookspire schon, öffnet dieser Link normalerweise direkt die App. Falls du stattdessen hier gelandet
+        bist, gib in der App unter Freund*innen → Buchclubs diesen Code ein:
+      </p>
+      <p><strong id="code" data-code></strong></p>
+      <p><a class="button" href="/">Mehr über Bookspire</a></p>
+
+      <div lang="en">
+        <h2>You are invited to a book club.</h2>
+        <p>
+          If you already have Bookspire, this link usually opens the app. If you ended up here instead, enter this
+          code in the app under Friends → Book clubs:
+        </p>
+        <p><strong data-code></strong></p>
+      </div>
+    </main>
+
+    <script>
+      const code = new URLSearchParams(location.search).get('code') || '–';
+      document.querySelectorAll('[data-code]').forEach((element) => {
+        element.textContent = code;
+      });
+    </script>
+  </body>
+</html>
