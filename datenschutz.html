@@ -25,7 +25,7 @@
 
     <main class="wrap narrow legal">
       <h1>Datenschutzerklärung</h1>
-      <p class="updated">Stand: 8. November 2026</p>
+      <p class="updated">Stand: 11. November 2026</p>
 
       <p>
         Diese Erklärung beschreibt, welche Daten die App Bookspire und diese Webseite verarbeiten,
@@ -147,8 +147,10 @@
 
       <h3>Kamera</h3>
       <p>
-        Die Kamera wird nur zum Scannen des Strichcodes (ISBN) verwendet, und nur, wenn du das
-        erlaubst. Bilder werden weder gespeichert noch übertragen.
+        Die Kamera wird nur verwendet, wenn du das erlaubst: zum Scannen des Strichcodes (ISBN)
+        und, wenn du ein Zitat vom Foto einer Seite übernimmst, für dieses Foto. Den Text darauf
+        liest dein Gerät selbst. Die Bilder verlassen dein Gerät nicht und werden nicht an uns
+        übertragen.
       </p>
 
       <h3>Erinnerungen</h3>
@@ -176,7 +178,8 @@
         <li>Benutzername und Anzeigename</li>
         <li>
           deine Bibliothek: Buchangaben, Lesestatus und -daten, Seitenstand, Bewertungen, Notizen,
-          Favoriten, ob ein Buch auf deiner Wunschliste steht, und an wen du ein Buch verliehen hast
+          Zitate, Stimmung und Tempo eines Buchs, Favoriten, ob ein Buch auf deiner Wunschliste
+          steht, und an wen du ein Buch verliehen hast
         </li>
         <li>die Einrichtung deines Lesezimmers</li>
         <li>wie viele Seiten du an welchem Tag gelesen hast (für die Monatsrangliste)</li>
@@ -185,7 +188,7 @@
           welches deiner Geräte gerade synchronisiert wird: eine zufällige Kennung des Geräts, ob es ein
           iPhone, iPad, Android-Gerät oder Browser ist, und wann es zuletzt synchronisiert wurde
         </li>
-        <li>Freundschaften, Empfehlungen an Freund*innen, Blockierungen und Meldungen</li>
+        <li>Freundschaften, Empfehlungen an Freund*innen mit deiner Notiz, Blockierungen und Meldungen</li>
         <li>
           in welchen Buchclubs du bist: Name des Clubs, wer ihn leitet, wann du beigetreten bist und
           ob du ihn verlassen hast, dazu die Bücher des Clubs (Titel, Autor*in, ISBN, Cover, Reihe),
@@ -194,8 +197,12 @@
         </li>
         <li>welche Bücher du zum Bookspire-Katalog beigetragen hast (siehe unten)</li>
         <li>
-          ob und bis wann du Mitglied der Bookspire Gilde bist und welchen Gilden-Code du
-          eingelöst hast
+          ob und bis wann du Mitglied der Bookspire Gilde bist, ob die Mitgliedschaft aus einem
+          Abo oder einem Gilden-Code stammt und welchen Gilden-Code du eingelöst hast
+        </li>
+        <li>
+          wenn du Mitteilungen erlaubst: die Kennung deines Geräts für Mitteilungen und welche
+          Arten von Mitteilungen du ausgeschaltet hast (siehe unten)
         </li>
       </ul>
 
@@ -238,6 +245,37 @@
         Buchangaben bleiben im Katalog, weil sie nichts über dich verraten.
       </p>
 
+      <h3>Mitteilungen</h3>
+      <p>
+        Mit Konto kann dir Bookspire Mitteilungen schicken: wenn dir jemand eine
+        Freundschaftsanfrage stellt, deine Anfrage annimmt oder dir ein Buch empfiehlt, und aus
+        deinen Buchclubs, wenn eine Abstimmung beginnt oder ein neues Buch an der Reihe ist. Dafür
+        fragt die App einmal nach deiner Erlaubnis. Erlaubst du es, speichern wir zu deinem Konto
+        eine Kennung des Geräts für Mitteilungen (Push-Token), ob es ein iPhone oder ein
+        Android-Gerät ist, die Sprache der App und welche Arten von Mitteilungen du ausgeschaltet
+        hast. Die Mitteilungen verschickt unser Server über den Dienst Expo (650 Industries, Inc.,
+        Palo Alto, USA), der sie an den Mitteilungsdienst von Apple oder Google (Firebase Cloud
+        Messaging) weitergibt, damit sie auf deinem Gerät erscheinen. Übertragen werden dabei die
+        Kennung des Geräts und der Text der Mitteilung, also etwa der Anzeigename der Person und
+        der Titel des Buchs. Meldet sich ein Gerät 60 Tage lang nicht, löschen wir seine Kennung
+        (Art. 6 Abs. 1 lit. b DSGVO). Ausschalten kannst du Mitteilungen jederzeit in der App oder
+        in den Einstellungen deines Geräts.
+      </p>
+
+      <h3>Bookspire Gilde und Käufe</h3>
+      <p>
+        Die Bookspire Gilde kannst du in der App als Abo abschließen. Bezahlt wird über den App
+        Store von Apple oder über Google Play; deine Zahlungsdaten sehen wir nie, und für den Kauf
+        selbst gelten die Datenschutzbestimmungen des jeweiligen Stores. Damit ein Abo zu deinem
+        Konto gehört und auf all deinen Geräten gilt, nutzen wir den Dienst RevenueCat
+        (RevenueCat, Inc., San Francisco, USA). Erst wenn du angemeldet bist und das Angebot der
+        Gilde oder dein Abo öffnest, erhält RevenueCat die Kennung deines Bookspire-Kontos (nicht
+        deine E-Mail-Adresse und nicht deinen Namen), deine Käufe und Abos aus dem Store mit
+        Datum, Produkt und Preis, technische Angaben wie App-Version, Betriebssystem und Sprache
+        sowie, technisch bedingt, deine IP-Adresse. RevenueCat teilt unserem Server mit, ob und
+        bis wann dein Abo läuft (Art. 6 Abs. 1 lit. b DSGVO).
+      </p>
+
       <h3>Wo die Daten liegen</h3>
       <p>
         Konten und Daten werden beim Dienst Supabase gespeichert (Supabase Pte. Ltd., Singapur).
@@ -256,10 +294,15 @@
       <h3>Konto löschen</h3>
       <p>
         Du kannst dein Konto jederzeit in der App unter Profil löschen. Dabei werden dein Profil,
-        deine Bibliothek, dein Lesezimmer, deine Lesetage, Freundschaften, Empfehlungen, deine
-        Buchclubs, deine Mitgliedschaft in der Gilde und der Bezug zu deinen Beiträgen im Bookspire-Katalog sofort
-        vom Server entfernt. Die Daten auf deinem Gerät bleiben, bis du sie dort löschst. Ohne
-        die App geht es per E-Mail, siehe <a href="konto-loeschen.html">Konto löschen</a>.
+        deine Bibliothek mit Notizen und Zitaten, dein Lesezimmer, deine Lesetage und Lesezeiten,
+        deine Geräte und ihre Kennungen für Mitteilungen, Freundschaften, Empfehlungen, deine
+        Buchclubs, deine Mitgliedschaft in der Gilde und der Bezug zu deinen Beiträgen im
+        Bookspire-Katalog sofort vom Server entfernt. Ein laufendes Abo endet dadurch nicht;
+        kündige es im App Store oder bei Google Play. Den Kaufverlauf zu deiner Konto-Kennung bei
+        RevenueCat löschen wir auf Wunsch per E-Mail. Auf dem Gerät, auf dem du löschst, entfernt
+        die App auch deine Bücher und dein Zimmer; auf anderen Geräten bleibt, was dort gespeichert
+        ist, bis du die App dort löschst. Ohne die App geht es per E-Mail, siehe
+        <a href="konto-loeschen.html">Konto löschen</a>.
       </p>
 
       <h2>5. Fehlerberichte</h2>

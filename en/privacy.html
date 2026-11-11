@@ -25,7 +25,7 @@
 
     <main class="wrap narrow legal">
       <h1>Privacy policy</h1>
-      <p class="updated">Last updated: 8 November 2026</p>
+      <p class="updated">Last updated: 11 November 2026</p>
       <p class="note">
         This is a translation for convenience. The
         <a href="../datenschutz.html" hreflang="de">German version</a> is the binding one.
@@ -147,8 +147,9 @@
 
       <h3>Camera</h3>
       <p>
-        The camera is only used to scan a book's barcode (ISBN), and only if you allow it. No
-        images are stored or sent.
+        The camera is only used if you allow it: to scan a book's barcode (ISBN) and, when you
+        take a quote from a photo of a page, for that photo. Your device reads the text on it
+        itself. The images never leave your device and are not sent to us.
       </p>
 
       <h3>Reminders</h3>
@@ -171,7 +172,8 @@
         <li>username and display name</li>
         <li>
           your library: book details, reading status and dates, current page, ratings, notes,
-          favourites, whether a book is on your wishlist, and who you lent a book to
+          quotes, a book's mood and pace, favourites, whether a book is on your wishlist, and who
+          you lent a book to
         </li>
         <li>the furnishing of your reading room</li>
         <li>how many pages you read on which day (for the monthly ranking)</li>
@@ -180,7 +182,7 @@
           which of your devices is currently being synced: a random ID for the device, whether it is an
           iPhone, iPad, Android device or browser, and when it was last synced
         </li>
-        <li>friendships, recommendations to friends, blocks and reports</li>
+        <li>friendships, recommendations to friends with your note, blocks and reports</li>
         <li>
           which book clubs you are in: the name of the club, who leads it, when you joined and whether
           you have left it, as well as the club’s books (title, author, ISBN, cover, series), who
@@ -188,7 +190,14 @@
           the leader enters one
         </li>
         <li>which books you contributed to the Bookspire catalog (see below)</li>
-        <li>whether and until when you are a member of the Bookspire Guild, and which guild code you redeemed</li>
+        <li>
+          whether and until when you are a member of the Bookspire Guild, whether the membership
+          comes from a subscription or a guild code, and which guild code you redeemed
+        </li>
+        <li>
+          if you allow notifications: your device's notification ID and which kinds of
+          notifications you have turned off (see below)
+        </li>
       </ul>
 
       <h3>What friends see</h3>
@@ -226,6 +235,36 @@
         book details stay in the catalog, as they say nothing about you.
       </p>
 
+      <h3>Notifications</h3>
+      <p>
+        With an account, Bookspire can send you notifications: when someone sends you a friend
+        request, accepts yours or recommends a book to you, and from your book clubs when a vote
+        starts or a new book is up next. The app asks for your permission once. If you allow it,
+        we store with your account an ID of the device for notifications (push token), whether it
+        is an iPhone or an Android device, the app's language and which kinds of notifications you
+        have turned off. Our server sends the notifications through the Expo service
+        (650 Industries, Inc., Palo Alto, USA), which passes them on to Apple's or Google's
+        notification service (Firebase Cloud Messaging) so they appear on your device. This
+        transfers the device ID and the text of the notification, such as the person's display
+        name and the book's title. If a device has not checked in for 60 days, we delete its ID
+        (Art. 6(1)(b) GDPR). You can turn notifications off at any time in the app or in your
+        device's settings.
+      </p>
+
+      <h3>Bookspire Guild and purchases</h3>
+      <p>
+        You can subscribe to the Bookspire Guild in the app. Payment goes through Apple's App
+        Store or Google Play; we never see your payment details, and the purchase itself is
+        covered by the store's privacy policy. So that a subscription belongs to your account and
+        applies on all your devices, we use the RevenueCat service (RevenueCat, Inc.,
+        San Francisco, USA). Only once you are signed in and open the guild offer or your
+        subscription does RevenueCat receive your Bookspire account ID (not your email address and
+        not your name), your purchases and subscriptions from the store with date, product and
+        price, technical details such as app version, operating system and language, and, for
+        technical reasons, your IP address. RevenueCat tells our server whether and until when your
+        subscription runs (Art. 6(1)(b) GDPR).
+      </p>
+
       <h3>Where the data is stored</h3>
       <p>
         Accounts and data are stored with Supabase (Supabase Pte. Ltd., Singapore). The servers
@@ -241,11 +280,16 @@
 
       <h3>Deleting your account</h3>
       <p>
-        You can delete your account at any time in the app under Profile. Your profile, library,
-        reading room, reading days, friendships, recommendations, your book clubs, your guild membership and the link to your
-        contributions to the Bookspire catalog are then removed from the
-        server immediately. The data on your device stays until you delete it there. Without the
-        app, you can ask by email, see <a href="delete-account.html">Delete your account</a>.
+        You can delete your account at any time in the app under Profile. Your profile, your
+        library with notes and quotes, your reading room, reading days and reading times, your
+        devices and their notification IDs, friendships, recommendations, your book clubs, your
+        guild membership and the link to your contributions to the Bookspire catalog are then
+        removed from the server immediately. A running subscription does not end with it; cancel
+        it in the App Store or on Google Play. We delete the purchase history for your account ID
+        at RevenueCat on request by email. On the device where you delete your account, the app
+        also removes your books and your room; on other devices, what is stored there stays until
+        you delete the app there. Without the app, you can ask by email, see
+        <a href="delete-account.html">Delete your account</a>.
       </p>
 
       <h2>5. Error reports</h2>
