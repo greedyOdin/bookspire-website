@@ -125,7 +125,11 @@
         dieser Treffer lädt dein Gerät direkt bei Google; dabei wird deine IP-Adresse an Google
         übertragen. Unser Server speichert diese Anfragen nicht;
         Supabase protokolliert Aufrufe kurzzeitig, um Fehler zu finden. Auch das gilt mit und ohne
-        Konto (Art. 6 Abs. 1 lit. b DSGVO).
+        Konto (Art. 6 Abs. 1 lit. b DSGVO). Damit niemand die Anfragen aufbraucht, die wir bei Google
+        stellen dürfen, zählt unser Server, wie oft er von derselben IP-Adresse gefragt wird. Die
+        Adresse selbst speichert er nicht, nur eine Prüfsumme (Hash), gebildet mit einem täglich
+        wechselnden Geheimwert, zusammen mit der Zahl der Anfragen, und löscht beides nach
+        spätestens einem Tag (Art. 6 Abs. 1 lit. f DSGVO).
       </p>
       <p>
         Außerdem schickt die App den Suchbegriff oder die ISBN an unseren Server bei Supabase in

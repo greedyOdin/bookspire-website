@@ -124,7 +124,10 @@
         images of these results are loaded by your device directly from Google, which sends your
         IP address to Google. Our server does not store these requests;
         Supabase keeps short-lived logs of calls to find errors. This applies with or without an
-        account (Art. 6(1)(b) GDPR).
+        account (Art. 6(1)(b) GDPR). So that nobody can use up the requests we may make to Google,
+        our server counts how often it is asked from the same IP address. It does not store the
+        address, only a checksum (hash) formed with a secret that changes every day, together with
+        the number of requests, and deletes both after one day at the latest (Art. 6(1)(f) GDPR).
       </p>
       <p>
         The app also sends the search term or the ISBN to our server at Supabase in Ireland. The
