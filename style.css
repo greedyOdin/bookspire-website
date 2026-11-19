@@ -303,6 +303,48 @@ h3 {
   margin: 0 0 1.5rem;
 }
 
+/* Official store badges. Google's artwork has its own padding, so it is drawn larger
+   and pulled in until both badges look the same height. */
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
+.waitlist .store-badges {
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.store-badges a {
+  display: block;
+  line-height: 0;
+}
+
+.badge-apple img {
+  height: 48px;
+  width: auto;
+}
+
+.badge-google img {
+  height: 62px;
+  width: auto;
+  margin: -7px -8px;
+}
+
+.price {
+  margin: 0;
+  color: var(--brass-text);
+  font-weight: 700;
+}
+
+.store-note {
+  margin: 0.75rem 0 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
 .cta-row {
   display: flex;
   flex-wrap: wrap;
@@ -917,10 +959,12 @@ figure {
 
   /* The headline and lead stay put: they are what the page is judged by while it loads. */
   .hero-text .eyebrow,
-  .hero-text .cta-row {
+  .hero-text .store-badges,
+  .hero-text .store-note {
     animation: rise 0.7s ease-out both;
   }
-  .hero-text .cta-row { animation-delay: 0.15s; }
+  .hero-text .store-badges,
+  .hero-text .store-note { animation-delay: 0.15s; }
 
   /* Rows fade up as they scroll in; browsers without scroll timelines just show them. */
   @supports (animation-timeline: view()) {
