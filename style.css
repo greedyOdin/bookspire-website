@@ -863,7 +863,8 @@ figure {
   margin: 1.5rem 0 1rem;
 }
 
-.waitlist-form input[type='email'] {
+.waitlist-form input[type='email'],
+.redeem-form input[name='code'] {
   flex: 1 1 16rem;
   max-width: 22rem;
   min-height: 3.2rem;
@@ -875,7 +876,8 @@ figure {
   font: inherit;
 }
 
-.waitlist-form input[type='email']:focus-visible {
+.waitlist-form input[type='email']:focus-visible,
+.redeem-form input[name='code']:focus-visible {
   outline: none;
   border-color: var(--primary);
 }
@@ -1035,4 +1037,11 @@ figure {
   background: var(--placeholder);
   border-radius: 0.3rem;
   padding: 0 0.3rem;
+}
+
+/* The code is short: its field stays narrow beside the address. */
+.redeem-form input[name='code'] {
+  flex: 0 1 10rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
