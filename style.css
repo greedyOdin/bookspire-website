@@ -1045,3 +1045,19 @@ figure {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+
+/* On the redeem page: the way to the app for those who do not have it yet. */
+.redeem-stores {
+  margin: 2rem 0 1.5rem;
+  padding: 1.25rem 1.5rem 1.5rem;
+  border-radius: 1.5rem;
+  background: var(--card);
+}
+
+.redeem-stores h2 {
+  margin-top: 0;
+}
+
+.redeem-stores .store-badges {
+  margin-top: 1rem;
+}
