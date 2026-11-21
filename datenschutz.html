@@ -25,7 +25,7 @@
 
     <main class="wrap narrow legal">
       <h1>Datenschutzerklärung</h1>
-      <p class="updated">Stand: 15. November 2026</p>
+      <p class="updated">Stand: 21. November 2026</p>
 
       <p>
         Diese Erklärung beschreibt, welche Daten die App Bookspire und diese Webseite verarbeiten,
@@ -137,7 +137,7 @@
       <p>
         Außerdem schickt die App den Suchbegriff oder die ISBN an unseren Server bei Supabase in
         Irland. Dort steht der Bookspire-Katalog mit Büchern, die Leser*innen selbst eingetragen
-        haben (siehe „Der Bookspire-Katalog“ in Abschnitt 4). Findet die Suche nichts Passendes,
+        haben oder in ihren Bibliotheken haben (siehe „Der Bookspire-Katalog“ in Abschnitt 4). Findet die Suche nichts Passendes,
         etwa wegen eines Tippfehlers, schlägt dort außerdem ein Verzeichnis bekannter Buchtitel,
         gebaut aus den frei verfügbaren Daten von Open Library, den gemeinten Titel vor. Unser
         Server speichert den Suchbegriff nicht; Supabase protokolliert Aufrufe kurzzeitig, um
@@ -250,6 +250,18 @@
         lit. f DSGVO). Meldest du einen Eintrag als falsch oder unpassend, behandeln wir das wie
         jede andere Meldung. Löschst du dein Konto, entfällt der Bezug zu deinem Konto; die
         Buchangaben bleiben im Katalog, weil sie nichts über dich verraten.
+      </p>
+      <p>
+        Außerdem nimmt der Katalog Bücher aus den Bibliotheken auf, die mit einem Konto
+        synchronisiert werden, allerdings erst, wenn mindestens zwei Konten ein Buch mit derselben
+        ISBN haben. Übernommen werden nur die Buchangaben (Titel, Untertitel, Autor*innen, Reihe und
+        Band, Verlag, Erscheinungsjahr, Seitenzahl, Sprache, ISBN und der Link zu einem Cover aus
+        einer öffentlichen Quelle) und die Zahl der Konten, die das Buch haben. Wer ein Buch hat,
+        speichert der Katalog nicht, und niemand kann es dort ablesen. Weichen die Angaben
+        voneinander ab, gilt die häufigste Schreibweise. Der Server baut diesen Teil des Katalogs
+        jede Nacht neu; hat kein zweites Konto das Buch mehr, verschwindet es wieder. So findet die
+        Suche Bücher auch dann, wenn externe Quellen ausfallen oder sie nicht kennen (Art. 6 Abs. 1
+        lit. f DSGVO).
       </p>
 
       <h3>Mitteilungen</h3>
