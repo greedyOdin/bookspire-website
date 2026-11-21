@@ -101,7 +101,8 @@ if (switchLink && preferred && preferred.startsWith('de') === english && arrived
   document.body.append(hint);
 }
 
-const form = document.querySelector('.waitlist-form');
+// The redeem form shares the look, not this script.
+const form = document.querySelector('.waitlist-form:not(.redeem-form)');
 if (form) {
   const status = document.querySelector('.form-status');
   const button = form.querySelector('button');
